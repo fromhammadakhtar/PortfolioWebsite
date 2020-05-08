@@ -1,0 +1,169 @@
+// Tablets & Smaller Devices
+@media (max-width: 800px) {
+  #header {
+    &-home {
+      height: 30rem;
+    }
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+}
+// Smartphones
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    li {
+      padding: 1rem;
+    }
+  }
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+      background-position: 20% 30%;
+      .header-content {
+        display: none;
+      }
+    }
+    &-inner {
+      height: 10rem;
+    }
+  }
+
+  #home {
+    &-a {
+      .specials {
+        grid-template-columns: 1fr;
+        div {
+          border-bottom: 1px solid $light-color;
+          padding-bottom: 1rem;
+          &:last-child {
+            border: none;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+    &-b {
+      .stats {
+        grid-template-columns: 1fr;
+        div {
+          padding: 2rem 0 1rem 0;
+        }
+      }
+    }
+    &-c {
+      .process {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bio-image"
+          "bio"
+          "aw1"
+          "aw2"
+          "aw3";
+      }
+    }
+
+    &-c {
+      display: none;
+    }
+
+    &-d {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  // footer
+
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "email"
+          "subject"
+          "phone"
+          "message";
+      }
+    }
+    &-b {
+      .contact-info {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+      }
+      div {
+        border-bottom: 1px #555 solid;
+        padding-bottom: 1rem;
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Landscape
+
+@media (max-height: 500px) {
+  #header {
+    &-home {
+      .header-content {
+        padding-top: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-height: 330px) {
+  #header {
+    &-home {
+      .header-content {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  #home {
+    &-c {
+      .process {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  #contact {
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
